@@ -1,5 +1,14 @@
 def fibonacci(num)
   # type your code in here
+  fibArr = [0, 1]
+  return fibArr[num] if num < 2
+
+  (num-1).times do 
+    sum = fibArr[0] + fibArr[1]
+    fibArr = [fibArr[1], sum]
+  end
+
+  fibArr.last  
 end
 
 if __FILE__ == $PROGRAM_NAME
